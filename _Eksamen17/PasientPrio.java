@@ -1,5 +1,5 @@
 public class PasientPrio extends PasientAdm {
-    Pasient[] startPekere = new Pasient[Pasient.MAXPASPRIO+1];
+    Pasient[] startPekere = new Pasient[Pasient.MAXPASPRIO+1]; // viktig å huske at statiske metoder kalles statisk!
     Pasient[] sluttPekere = new Pasient[Pasient.MAXPASPRIO+1];
 
     @Override
