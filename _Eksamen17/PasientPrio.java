@@ -39,17 +39,7 @@ public class PasientPrio extends PasientAdm {
     }
 
     public Pasient hentUt(int i) {
-        Pasient peker = startPekere[i];
-        Pasient pasientSomHentes = sluttPekere[i];
-        // setter den nest siste pekeren til å bli sluttpeker
-        while (peker.neste != null) {
-            peker = peker.neste;
-        }
-        sluttPekere[i] = peker;
-        peker.neste = null;
-
-        return pasientSomHentes;
-
+        return hentUt(sluttPekere[i]);
     }
 
 }
