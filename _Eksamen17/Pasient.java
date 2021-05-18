@@ -12,4 +12,8 @@ abstract class Pasient {
        this.fnr = fnr;
        prioritet = prio;
     }
+
+    public abstract void iFaresonen(Pasient p);
+
+    public abstract void kanHaSykdom(Pasient p);
  }
