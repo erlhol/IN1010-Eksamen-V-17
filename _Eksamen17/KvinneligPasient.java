@@ -4,12 +4,12 @@ public class KvinneligPasient extends Pasient {
     }
 
     @Override
-    public static void iFaresonen(Pasient p) {
-        Sykehus.iFaresonenKvinne(p);
+    public boolean iFaresonen() {
+        Sykehus.iFaresonenKvinne(this);
     }
 
     @Override
-    public void kanHaSykdom(Pasient p) {
-        Sykehus.iFaresonenKvinne(p);
+    public void kanHaSykdom() {
+        Sykehus.iFaresonenKvinne(this);
     }
 }

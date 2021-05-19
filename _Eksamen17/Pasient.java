@@ -13,7 +13,7 @@ abstract class Pasient {
        prioritet = prio;
     }
 
-    public abstract void iFaresonen(Pasient p);
+    public abstract boolean iFaresonen();
 
-    public abstract void kanHaSykdom(Pasient p);
+    public abstract void kanHaSykdom();
  }
