@@ -2,6 +2,7 @@ public class PasientPrio extends PasientAdm {
     Pasient[] startPekere = new Pasient[Pasient.MAXPASPRIO+1]; // viktig å huske at statiske metoder kalles statisk!
     Pasient[] sluttPekere = new Pasient[Pasient.MAXPASPRIO+1];
 
+    // henter ut på slutten og setter inn på starten
     @Override
     public void settInnPasient(Pasient p) {
         if (startPekere[p.prioritet] == null) {
@@ -18,15 +19,17 @@ public class PasientPrio extends PasientAdm {
         Pasient peker = startPekere[p.prioritet];
         if (peker == p) {
             startPekere[p.prioritet] = peker.neste;
+            if (peker.neste == null) {
+                sluttPekere[p.prioritet] = null;
+            }
             return p;
         }
         while (peker.neste != null) {
-            peker = peker.neste;
             if (peker.neste == p) {
                 peker.neste = peker.neste.neste;
                 return p;
             }
-            
+            peker = peker.neste;
         }
         if (peker.neste != p) {
             return null;
