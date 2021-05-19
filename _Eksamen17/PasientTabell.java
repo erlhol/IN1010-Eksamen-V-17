@@ -15,6 +15,7 @@ public class PasientTabell extends PasientAdm {
                 return;
             }
         }
+        forrigeKall = 0;
     }
 
     public Pasient hentUt(int i) {
