@@ -22,15 +22,8 @@ public class Sil implements Runnable {
     }
 
     private void settIBuffer(Pasient pas) {
-        if (pas instanceof MannligPasient) {
-            if (Sykehus.iFaresonenMann(pas)) {
-                analyseBuffer.settInn();
-            }
-        }
-        else {
-            if (Sykehus.iFaresonenKvinne(pas)) {
-                analyseBuffer.settInn();
-            }
+        if (pas.iFaresonen()) {
+            analyseBuffer.settInn(pas);
         }
     }
 }
