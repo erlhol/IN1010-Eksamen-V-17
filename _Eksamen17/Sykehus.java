@@ -31,7 +31,7 @@ public class Sykehus {
 
     public static void utforAnalyse(PasientPrio pasientPrio, int antAnalyser) {
         AnalyseBuffer buffer = new AnalyseBuffer();
-        for (int i = 0; i < MAXPASPRIO+1; i++) {
+        for (int i = 0; i < Pasient.MAXPASPRIO+1; i++) {
             new Thread(new Sil(pasientPrio,buffer)).start();
         }
         for (int i = 0; i < antAnalyser; i++) {
