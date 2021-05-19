@@ -1,7 +1,7 @@
 public class Akutten extends Avdeling {
 
     public Akutten() {
-        super(new PasientPrio());
+        pasientAdm = new PasientPrio(); // bruker variabel fra super-klassen
     }
 
 
